@@ -5,6 +5,34 @@ All notable changes to the Enterprise-RAG-Framework project will be documented i
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.0] - 2025-06-01
+
+### Implemented
+- **Document Processing Implementations**
+  - Added comprehensive image processor with OCR support
+    - Support for common image formats (PNG, JPG, TIFF)
+    - Metadata extraction from EXIF data
+    - Customizable OCR configuration
+    - Image preprocessing for better OCR results
+  - Added audio processor with transcription
+    - Support for multiple audio formats (MP3, WAV, M4A)
+    - Online transcription using OpenAI Whisper API
+    - Offline transcription with local Whisper models
+    - Fallback mechanism between online and offline modes
+    - Audio metadata extraction
+  - Updated document processor to support new formats
+    - Proper integration of image processing
+    - Proper integration of audio processing
+
+- **Evaluation Suite Implementations**
+  - Added hallucination detection module
+    - Semantic similarity-based detection
+    - Factual consistency checking
+    - Numerical fact extraction and validation
+    - Citation accuracy verification
+    - Combined multi-strategy detection
+    - LLM-based verification framework
+
 ## [Unreleased]
 
 ### Added

@@ -75,12 +75,12 @@ class DocumentProcessor:
         except ImportError:
             logger.warning("Excel processing libraries not found, Excel processing disabled")
 
-        # OCR processor (optional)
+        # Image processor with OCR (optional)
         if self.config.get("ocr_enabled", False):
             try:
-                from .ocr_processor import OCRProcessor
-                self.processors["image"] = OCRProcessor(self.config)
-                logger.info("OCR processing enabled")
+                from .image_processor import ImageProcessor
+                self.processors["image"] = ImageProcessor(self.config)
+                logger.info("Image processing with OCR enabled")
             except ImportError:
                 logger.warning("OCR libraries not found, image processing disabled")
 
